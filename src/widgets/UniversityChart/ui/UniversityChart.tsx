@@ -3,7 +3,7 @@ import styles from "./mainPage.module.scss";
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
-import institutes from "stores/Institutes.json";
+import institutes from "stores/DB/Institutes.json";
 
 Chart.register(CategoryScale);
 
