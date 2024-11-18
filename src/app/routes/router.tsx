@@ -4,21 +4,27 @@ import { ErrorPage } from "pages/ErrorPage/ErrorPage";
 import { VisitPage } from "pages/VisitPage";
 import PageLayout from "widgets/PageLayout/PageLayout";
 import { CommentPage } from "pages/CommentPage";
+import { TeacherPage } from "pages/TeacherPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageLayout children={<MainPage/>}/> ,
+    element: <PageLayout children={<MainPage />} />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/visit",
-    element: <PageLayout children={<VisitPage />}/>,
+    element: <PageLayout children={<VisitPage />} />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/comments",
     element: <CommentPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/profile/:id",
+    element: <PageLayout children={<TeacherPage />} />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -2,10 +2,22 @@
     "groups": [
         {
             "id": 1011,
-            "name": "Группа ПИ-24",
+            "name": "ПИ-24",
             "course": 100,
             "institute_id": 5,
-            "department_id": 101,
+            "department_id": 301,
+            "date": ["11.09.2024", "18.09.2024","25.09.2024","01.10.2024","08.10.2024"],
+            "students": [
+                10001,
+                10002
+            ]
+        },
+        {
+            "id": 1012,
+            "name": "ПИ-22-1",
+            "course": 300,
+            "institute_id": 5,
+            "department_id": 301,
             "date": ["11.09.2024", "18.09.2024","25.09.2024","01.10.2024","08.10.2024"],
             "students": [
                 10001,
@@ -14,7 +26,7 @@
         },
         {
             "id": 1021,
-            "name": "Группа ЭК-24",
+            "name": "ЭК-24",
             "course": 100,
             "institute_id": 5,
             "department_id": 102,
@@ -25,7 +37,7 @@
         },
         {
             "id": 2011,
-            "name": "Группа ИСТ-23",
+            "name": "ИСТ-23",
             "course": 200,
             "institute_id": 3,
             "department_id": 201,
@@ -36,10 +48,10 @@
         },
         {
             "id": 2021,
-            "name": "Группа СК-23",
+            "name": "СК-23",
             "course": 200,
             "institute_id": 3,
-            "department_id": 301,
+            "department_id": 201,
             "date": ["11.09.2024", "18.09.2024","25.09.2024","01.10.2024","08.10.2024"],
             "students": [
                 10005,
@@ -48,7 +60,7 @@
         },
         {
             "id": 3021,
-            "name": "Группа АРХ-22",
+            "name": "АРХ-22",
             "course": 300,
             "institute_id": 4,
             "department_id": 302,
@@ -60,7 +72,7 @@
         },
         {
             "id": 4011,
-            "name": "Группа АРХ-21",
+            "name": "АРХ-21",
             "course": 400,
             "institute_id": 4,
             "department_id": 401,
@@ -72,7 +84,7 @@
         },
         {
             "id": 4021,
-            "name": "Группа САД-402",
+            "name": "САД-402",
             "course": 100,
             "institute_id": 3,
             "department_id": 402,
@@ -84,7 +96,7 @@
         },
         {
             "id": 5011,
-            "name": "Группа ЦЭТП-501",
+            "name": "ЦЭТП-501",
             "course": 100,
             "institute_id": 5,
             "department_id": 501,
@@ -96,7 +108,7 @@
         },
         {
             "id": 5021,
-            "name": "Группа ЦЭТП-502",
+            "name": "ЦЭТП-502",
             "course": 200,
             "institute_id": 2,
             "department_id": 502,
