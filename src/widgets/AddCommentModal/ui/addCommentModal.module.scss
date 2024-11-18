@@ -1,0 +1,14 @@
+.modal {
+  .select {
+    width: 100%;
+    cursor: pointer;
+  }
+  :global {
+    .ant-modal-body {
+      padding: 10px 0;
+    }
+  }
+  .textArea {
+    height: 180px;
+  }
+}
