@@ -1,0 +1,38 @@
+nav {
+    width: 22%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #202d3a;
+    color: white;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      width: 100%;
+  
+      img {
+        width: 80px;
+      }
+    }
+  
+    .navBar{
+      padding: 20px;
+      ul{
+        list-style: none;
+        li{
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img{
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+        }
+        
+      }
+      
+    }
+  }
