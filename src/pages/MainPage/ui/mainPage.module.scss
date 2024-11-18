@@ -1,3 +1,30 @@
 .mainPage {
-  width: 400px;
+  display: flex;
+
+
+
+  .content {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .monitoring, .analytics{
+      border: 1px solid rgb(2, 136, 209);
+      border-radius: 10px;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: rgb(2, 136, 209);
+      cursor: pointer;
+    }
+
+    .monitoring:hover, .analytics:hover{
+      background-color: rgba(2, 136, 209, 0.04);
+    }
+  }
 }
+
