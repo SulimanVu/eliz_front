@@ -5,7 +5,7 @@ import Departments from "stores/DB/Departments.json";
 import Institutes from "stores/DB/Institutes.json";
 import Comments from "stores/DB/Comments.json";
 import Groups from "stores/DB/Groups.json";
-import Subjects from "stores/DB/Subjects.json";
+import Disciplines from "stores/DB/Disciplines.json";
 import { Button, Flex, Image } from "antd";
 import { Text } from "shared/Title/Title";
 import { Title } from "shared/Text/Text";
@@ -22,7 +22,7 @@ export const TeacherPage = () => {
   const comments = Comments.comments.filter(
     (item) => item.teacher_id === teacher.id
   );
-  const subjects = Subjects.subjects;
+  const subjects = Disciplines.disciplines;
 
   const groups = Groups.groups;
 
@@ -67,7 +67,7 @@ export const TeacherPage = () => {
             <Text>
               Дисциплина:{" "}
               {
-                subjects.find((subject) => subject.id === comment.subject_id)
+                subjects.find((subject) => subject.id === comment.discipline_id)
                   .name
               }
             </Text>
