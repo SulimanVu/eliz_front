@@ -1,64 +1,88 @@
 {
     "disciplines": [
         {
-            "id": 101,
+            "id": 1,
             "name": "Иностранный язык",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 102,
+            "id": 2,
             "name": "Информатика",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 103,
+            "id": 3,
             "name": "История России",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 104,
+            "id": 4,
             "name": "Математика",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 105,
+            "id": 5,
             "name": "Основы военной подготовки",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 106,
+            "id": 6,
             "name": "Теория информации",
-            "group_id": 1011
+            "group_id": 1011,
+            "department_id": 301,
+            "teacher_id": 5004
         },
         {
-            "id": 107,
+            "id": 7,
             "name": "Микроэкономика",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         },
         {
-            "id": 108,
+            "id": 8,
             "name": "Основы зеленой экономики",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         },
         {
-            "id": 109,
+            "id": 9,
             "name": "Основы экономической деятельности предприятий",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         },
         {
-            "id": 110,
+            "id": 10,
             "name": "Физическая культура и спорт",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         },
         {
-            "id": 111,
+            "id": 11,
             "name": "Чеченский язык",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         },
         {
-            "id": 112,
+            "id": 12,
             "name": "Иностранный язык",
-            "group_id": 1021
+            "group_id": 1021,
+            "department_id": 102,
+            "teacher_id": 5002
         }
     ]
 }

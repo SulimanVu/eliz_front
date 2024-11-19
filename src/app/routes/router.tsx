@@ -13,13 +13,13 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/visit",
+    path: "/monitoring/visit",
     element: <PageLayout children={<VisitPage />} />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/comments",
-    element: <CommentPage />,
+    path: "/monitoring/comments",
+    element: <PageLayout children={<CommentPage />} />,
     errorElement: <ErrorPage />,
   },
   {

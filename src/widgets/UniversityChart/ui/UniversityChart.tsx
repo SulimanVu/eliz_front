@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./mainPage.module.scss";
+import styles from "./universityChart.module.scss";
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
 import { Pie } from "react-chartjs-2";

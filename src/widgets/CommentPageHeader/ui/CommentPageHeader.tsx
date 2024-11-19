@@ -1,8 +1,18 @@
 import { Button, DatePicker, Input, Select } from "antd";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Text } from "shared/Title/Title";
 import teachers from "stores/DB/Teachers.json";
 import styles from "./commentPageHeader.module.scss";
+import { AddCommentModal } from "widgets/AddCommentModal";
+
+export interface ItemProps {
+  id: number;
+  group_id: number;
+  discipline_id: number;
+  teacher_id: number;
+  date: string;
+  reason: string;
+}
 
 interface CommentPageHeaderProps {
   filteredTeacher: string;
@@ -11,6 +21,7 @@ interface CommentPageHeaderProps {
   setFilteredDate: (e: string) => void;
   filteredGroup: string;
   setFilteredGroup: (e: string) => void;
+  setCurrentItems: (e: ItemProps) => void;
 }
 
 export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
@@ -20,10 +31,18 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
   setFilteredDate,
   filteredGroup,
   setFilteredGroup,
+  setCurrentItems
 }) => {
+  const [commentModalToggle, setCommentModalToggle] = useState(false);
+
   return (
     <div className={styles.commentPageHeader}>
-      <Button className={styles.addComment}>Добавить замечание</Button>
+      <Button
+        className={styles.addComment}
+        onClick={() => setCommentModalToggle(true)}
+      >
+        Добавить замечание
+      </Button>
       <div className={styles.filters}>
         <Text>Фильтрация списка:</Text>
         <Select
@@ -54,6 +73,11 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
           value={filteredGroup}
           placeholder="Название группы"
           onChange={(e) => setFilteredGroup(e.target.value)}
+        />
+        <AddCommentModal
+          open={commentModalToggle}
+          setCommentModalToggle={() => setCommentModalToggle(false)}
+          setCurrentItems={(e)=>setCurrentItems(e)}
         />
       </div>
     </div>
