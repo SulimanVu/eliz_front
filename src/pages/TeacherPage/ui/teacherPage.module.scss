@@ -1,0 +1,43 @@
+.teacherPage {
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  .teacherInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  span {
+    font-size: 14px;
+  }
+
+  .avatar {
+    border-radius: 12px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .teacherComments{
+    width: 40%;
+    .comment{
+      padding: 8px 14px;
+      background-color: #3391cf;
+      border-radius: 8px;
+      span{
+        color: #fff;
+        cursor: default;
+      }
+      button{
+        margin-top: 10px;
+        align-self: flex-end;
+        width: min-content;
+        background-color: #fff;
+        cursor: pointer;
+        span{
+          color: #3391cf;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
