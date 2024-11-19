@@ -8,17 +8,17 @@ import { CommentPage } from "pages/CommentPage";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageLayout children={<MainPage/>}/> ,
+    element: <PageLayout children={<MainPage />} />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/visit",
-    element: <PageLayout children={<VisitPage />}/>,
+    path: "/monitoring/visit",
+    element: <PageLayout children={<VisitPage />} />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/comments",
-    element: <CommentPage />,
+    path: "/monitoring/comments",
+    element: <PageLayout children={<CommentPage />} />,
     errorElement: <ErrorPage />,
   },
 ]);

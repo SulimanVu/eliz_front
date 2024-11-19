@@ -5,6 +5,15 @@ import teachers from "stores/DB/Teachers.json";
 import styles from "./commentPageHeader.module.scss";
 import { AddCommentModal } from "widgets/AddCommentModal";
 
+export interface ItemProps {
+  id: number;
+  group_id: number;
+  discipline_id: number;
+  teacher_id: number;
+  date: string;
+  reason: string;
+}
+
 interface CommentPageHeaderProps {
   filteredTeacher: string;
   setFilteredTeacher: (e: string) => void;
@@ -12,6 +21,7 @@ interface CommentPageHeaderProps {
   setFilteredDate: (e: string) => void;
   filteredGroup: string;
   setFilteredGroup: (e: string) => void;
+  setCurrentItems: (e: ItemProps) => void;
 }
 
 export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
@@ -21,6 +31,7 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
   setFilteredDate,
   filteredGroup,
   setFilteredGroup,
+  setCurrentItems
 }) => {
   const [commentModalToggle, setCommentModalToggle] = useState(false);
 
@@ -65,7 +76,8 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
         />
         <AddCommentModal
           open={commentModalToggle}
-          onClose={() => setCommentModalToggle(false)}
+          setCommentModalToggle={() => setCommentModalToggle(false)}
+          setCurrentItems={(e)=>setCurrentItems(e)}
         />
       </div>
     </div>

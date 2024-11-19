@@ -36,6 +36,8 @@ export const CommentPage = () => {
     return matchesTeacher && matchesDate && matchesGroup;
   });
 
+  const [currentItems, setCurrentItems] = useState(items);
+
   return (
     <div className={styles.commentPage}>
       <CommentPageHeader
@@ -45,8 +47,9 @@ export const CommentPage = () => {
         setFilteredDate={setFilteredDate}
         filteredGroup={filteredGroup}
         setFilteredGroup={setFilteredGroup}
+        setCurrentItems={(item) => setCurrentItems((prev) => [...prev, item])}
       />
-      <CommentList items={items} />
+      <CommentList items={currentItems} />
     </div>
   );
 };
