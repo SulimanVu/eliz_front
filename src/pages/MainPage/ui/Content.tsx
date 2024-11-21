@@ -11,7 +11,12 @@ const Content = () => {
       >
         Мониторинг
       </div>
-      <div className={styles.analytics}>Аналитика</div>
+      <div
+        className={styles.analytics}
+        onClick={() => navigate("/analitic/comments")}
+      >
+        Аналитика
+      </div>
     </div>
   );
 };

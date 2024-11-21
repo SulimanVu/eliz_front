@@ -50,6 +50,18 @@ export const Nav = () => {
               </li>
             </>
           )}
+          {params.includes("/analitic") && (
+            <li
+              onClick={() => navigate("/analitic/comments")}
+              className={
+                window.location.pathname.includes("comments")
+                  ? styles.active
+                  : null
+              }
+            >
+              Аналитика замечаний
+            </li>
+          )}
         </ul>
       </div>
     </nav>
