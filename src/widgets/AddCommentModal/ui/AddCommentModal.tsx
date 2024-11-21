@@ -10,18 +10,18 @@ import dayjs from "dayjs";
 
 interface AddCommentModalProps extends ModalProps {
   setCurrentItems: (e: ItemProps) => void;
-  setCommentModalToggle: ()=>void
+  seICommentModalToggle: ()=>void
 }
 
 const Item = Form.Item;
 
 export const AddCommentModal: FC<AddCommentModalProps> = ({
   open,
-  setCommentModalToggle,
+  seICommentModalToggle,
   setCurrentItems,
 }) => {
   const [currentTeacher, setCurrentTeacher] = useState();
-  const [comment, setComment] = useState("");
+  const [comment, seIComment] = useState("");
   const [group, setGroup] = useState();
   const [discipline, setDiscipline] = useState();
   const [date, setDate] = useState(undefined);
@@ -44,15 +44,15 @@ export const AddCommentModal: FC<AddCommentModalProps> = ({
       date,
       reason: comment,
     });
-    setCommentModalToggle();
+    seICommentModalToggle();
   };
 
   return (
     <Modal
       width={380}
       open={open}
-      onCancel={setCommentModalToggle}
-      onClose={setCommentModalToggle}
+      onCancel={seICommentModalToggle}
+      onClose={seICommentModalToggle}
       title="Добавить замечание"
       className={styles.modal}
       okButtonProps={{ disabled: !buttonDisabled }}
@@ -90,7 +90,7 @@ export const AddCommentModal: FC<AddCommentModalProps> = ({
         >
           <TextArea
             value={comment}
-            onChange={(e) => setComment(e.target.value)}
+            onChange={(e) => seIComment(e.target.value)}
             className={styles.textArea}
           />
         </Item>
