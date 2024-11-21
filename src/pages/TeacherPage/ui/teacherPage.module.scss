@@ -17,26 +17,37 @@
     overflow: hidden;
     object-fit: cover;
   }
-  .teacherComments{
+  .teacherComments {
     width: 40%;
-    .comment{
+    .comment {
+      position: relative;
       padding: 8px 14px;
       background-color: #3391cf;
       border-radius: 8px;
-      span{
+      span {
         color: #fff;
         cursor: default;
       }
-      button{
+      button {
         margin-top: 10px;
         align-self: flex-end;
         width: min-content;
         background-color: #fff;
         cursor: pointer;
-        span{
+        span {
           color: #3391cf;
           cursor: pointer;
         }
+      }
+      .break {
+        font-size: 14px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: red;
+        background-color: #fff;
+        padding: 2px 8px;
+        border-radius: 8px;
       }
     }
   }

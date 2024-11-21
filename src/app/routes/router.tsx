@@ -5,6 +5,7 @@ import { VisitPage } from "pages/VisitPage";
 import PageLayout from "widgets/PageLayout/PageLayout";
 import { CommentPage } from "pages/CommentPage";
 import { TeacherPage } from "pages/TeacherPage";
+import { AnaliticCommentPage } from "pages/AnaliticCommentPage";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ export const router = createBrowserRouter([
   {
     path: "/profile/:id",
     element: <PageLayout children={<TeacherPage />} />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/analitic/comments",
+    element: <PageLayout children={<AnaliticCommentPage />} />,
     errorElement: <ErrorPage />,
   },
 ]);

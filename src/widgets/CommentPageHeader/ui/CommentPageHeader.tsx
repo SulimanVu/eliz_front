@@ -33,13 +33,13 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
   setFilteredGroup,
   setCurrentItems
 }) => {
-  const [commentModalToggle, setCommentModalToggle] = useState(false);
+  const [commentModalToggle, seICommentModalToggle] = useState(false);
 
   return (
     <div className={styles.commentPageHeader}>
       <Button
         className={styles.addComment}
-        onClick={() => setCommentModalToggle(true)}
+        onClick={() => seICommentModalToggle(true)}
       >
         Добавить замечание
       </Button>
@@ -76,7 +76,7 @@ export const CommentPageHeader: FC<CommentPageHeaderProps> = ({
         />
         <AddCommentModal
           open={commentModalToggle}
-          setCommentModalToggle={() => setCommentModalToggle(false)}
+          seICommentModalToggle={() => seICommentModalToggle(false)}
           setCurrentItems={(e)=>setCurrentItems(e)}
         />
       </div>
