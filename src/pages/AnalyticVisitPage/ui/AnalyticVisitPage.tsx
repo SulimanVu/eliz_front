@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./visitPage.module.scss";
+import styles from "./analyticVisitPage.module.scss";
 import { Select, Input, Radio, Space, Button, Flex } from "antd";
 import type { RadioChangeEvent } from "antd";
 import Institutes from "stores/DB/Institutes.json";
@@ -9,7 +9,7 @@ import Students from "stores/DB/Students.json";
 import Disciplines from "stores/DB/Disciplines.json";
 import Teachers from "stores/DB/Teachers.json";
 
-export const VisitPage = () => {
+export const AnalyticVisitPage = () => {
   const [selectedItems, setSelectedItems] = useState();
   const [value, setValue] = useState(1);
   const [group, setGroup] = useState();
@@ -49,7 +49,7 @@ export const VisitPage = () => {
 
   return (
     <div className={styles.visitPage}>
-      <h3>Посещаемость</h3>
+      <h3>Аналитика посещаемости</h3>
       <Select
         placeholder="Выберите институт"
         value={selectedItems}
@@ -101,7 +101,7 @@ export const VisitPage = () => {
       </Flex>
       {stud && (
         <div>
-          <div style={{marginTop: '20px'}}> <b>Группа:</b> {selectedGroup.name}</div>
+          <div style={{ marginTop: '20px' }}> <b>Группа:</b> {selectedGroup.name}</div>
           <div><b>Преподаватель:</b> {teacher?.name}</div>
           <div><b>Дисциплина:</b> {disc}</div>
           <div><b>Тип отчетности:</b> зачет</div>
@@ -109,20 +109,46 @@ export const VisitPage = () => {
             <tr>
               <th className={styles.num}>№</th>
               <th className={styles.fio}>ФИО</th>
-              {selectedGroup?.date.map((d) => (
+              {/* {selectedGroup?.date.map((d) => (
                 <th>{d}</th>
-              ))}
+              ))} */}
             </tr>
             {groupStudents.map((stud, i) => (
               <tr>
                 <td className={styles.num}>{i + 1}</td>
                 <td className={styles.fio}>{stud.name}</td>
-                {stud.visit.map((vis) => (
+                {/* {stud.visit.map((vis) => (
                   <td style={vis === "+" ? { color: "green" } : { color: "red" }}>
                     {vis}
                   </td>
-                ))}
-              </tr>
+                ))} */}
+                <td>
+                  <div style={{
+                    position: 'relative',
+                    width: '50px',
+                    height: '50px',
+                    borderRadius: '100%',
+                    background: `conic-gradient(#1676fe ${stud.random * 3.6}deg, #d1cdcd ${stud.random * 3.6}deg 360deg)`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <div style={{
+                      position: 'absolute',
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '100%',
+                      background: '#fff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                      {stud.random}%
+                    </div>
+                  </div>
+                </td>
+                {/*  <td><div style={{width:'70px', height:'70px', border: '10px solid gray', borderRadius: '100%'}}> <div>{stud.random}</div> </div></td> */}
+              </tr> 
             ))}
           </table>
         </div>

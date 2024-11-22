@@ -51,16 +51,27 @@ export const Nav = () => {
             </>
           )}
           {params.includes("/analitic") && (
-            <li
-              onClick={() => navigate("/analitic/comments")}
-              className={
-                window.location.pathname.includes("comments")
-                  ? styles.active
-                  : null
-              }
-            >
-              Аналитика замечаний
-            </li>
+            <>
+              <li
+                onClick={() => navigate("/analitic/comments")}
+                className={
+                  window.location.pathname.includes("comments")
+                    ? styles.active
+                    : null
+                }
+              >
+                Аналитика замечаний
+              </li>
+              <li
+                onClick={() => navigate("/analitic/analyticvisit")}
+                className={
+                  window.location.pathname.includes("analyticvisit")
+                    ? styles.active
+                    : null
+                }
+              >
+                Аналитика посещаемости
+              </li></>
           )}
         </ul>
       </div>
