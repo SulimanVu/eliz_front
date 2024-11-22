@@ -5,6 +5,7 @@ import { VisitPage } from "pages/VisitPage";
 import PageLayout from "widgets/PageLayout/PageLayout";
 import { CommentPage } from "pages/CommentPage";
 import { TeacherPage } from "pages/TeacherPage";
+import { AnalyticVisitPage } from "pages/AnalyticVisitPage/ui/AnalyticVisitPage";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ export const router = createBrowserRouter([
   {
     path: "/monitoring/comments",
     element: <PageLayout children={<CommentPage />} />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/analytic/analyticvisit",
+    element: <PageLayout children={<AnalyticVisitPage />} />,
     errorElement: <ErrorPage />,
   },
   {
