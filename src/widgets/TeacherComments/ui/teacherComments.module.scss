@@ -1,0 +1,63 @@
+.teacherComments {
+  .title {
+    color: #1676fe;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .info {
+      position: relative;
+      border: 1px solid #1676fe;
+      border-radius: 8px;
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      &.notAns {
+        border: 1px solid rgb(255, 170, 0);
+      }
+      &.err {
+        border: 1px solid red;
+      }
+      .blue {
+        color: #1676fe;
+      }
+      .break {
+        font-size: 14px;
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+        color: red;
+        .notAnswer {
+          color: yellow;
+        }
+      }
+      .notAnswer {
+        color: rgb(255, 170, 0);
+        font-size: 14px;
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+      }
+      .two {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+        .notAnswer {
+          color: yellow;
+          word-wrap: none;
+          white-space: nowrap;
+        }
+        .break {
+          color: red;
+          word-wrap: none;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

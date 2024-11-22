@@ -22,7 +22,7 @@ export const TeacherPage = () => {
   const comments = Comments.comments.filter(
     (item) => item.teacher_id === teacher.id
   );
-  const subjects = Disciplines.disciplines;
+  const disciplines = Disciplines.disciplines;
 
   const groups = Groups.groups;
 
@@ -43,10 +43,10 @@ export const TeacherPage = () => {
           <Flex gap={4}>
             Дисциплины:
             <Flex gap={4}>
-              {teacher.subjects.map((item, index) => (
+              {teacher.disciplines.map((item, index) => (
                 <Text>
                   {item}
-                  {teacher.subjects.length > index + 1 ? "," : "."}
+                  {teacher.disciplines.length > index + 1 ? "," : "."}
                 </Text>
               ))}
             </Flex>
@@ -56,25 +56,36 @@ export const TeacherPage = () => {
         <Text>Институт: {institute.name}</Text>
       </div>
       <div className={styles.teacherComments}>
-        <Title level={4}>Замечания: </Title>
-        {comments.map((comment) => (
-          <Flex vertical gap={8} className={styles.comment}>
-            <Text>День: {comment.date}</Text>
-            <Text>
-              Группа:{" "}
-              {groups.find((group) => group.id === comment.group_id).name}
-            </Text>
-            <Text>
-              Дисциплина:{" "}
-              {
-                subjects.find((subject) => subject.id === comment.discipline_id)
-                  .name
-              }
-            </Text>
-            <Text>Причина: {comment.reason}</Text>
-            <Button>Написать объяснительную</Button>
-          </Flex>
-        ))}
+        {comments.length ? (
+          <>
+            {" "}
+            <Title level={4}>Замечания: </Title>
+            {comments.map((comment) => (
+              <Flex vertical gap={8} className={styles.comment}>
+                {comment.breakdown && (
+                  <Text className={styles.break}>Срыв</Text>
+                )}
+                <Text>День: {comment.date}</Text>
+                <Text>
+                  Группа:{" "}
+                  {groups.find((group) => group.id === comment.group_id).name}
+                </Text>
+                <Text>
+                  Дисциплина:{" "}
+                  {
+                    disciplines.find(
+                      (discipline) => discipline.id === comment.discipline_id
+                    ).name
+                  }
+                </Text>
+                <Text>Причина: {comment.reason}</Text>
+                <Button>Написать объяснительную</Button>
+              </Flex>
+            ))}
+          </>
+        ) : (
+          <Text>Нет замечаний</Text>
+        )}
       </div>
     </div>
   );

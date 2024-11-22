@@ -1,0 +1,10 @@
+.item {
+  &.active {
+    color: #fff;
+    background-color: #1676fe;
+  }
+  .commentLength {
+    padding: 10px 15px;
+    text-align: center !important;
+  }
+}

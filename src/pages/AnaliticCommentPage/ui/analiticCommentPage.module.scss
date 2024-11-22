@@ -1,0 +1,70 @@
+.analiticCommentPage {
+  width: 100%;
+  height: calc(100vh - 40px);
+  padding: 20px 20px 20px 10px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  .left {
+    height: 100%;
+    width: 60%;
+    position: relative;
+    .filters {
+      position: sticky;
+      top: 0;
+      span {
+        white-space: nowrap;
+      }
+      margin-bottom: 15px;
+    }
+    .tableContainer {
+      max-height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      table {
+        width: 100%;
+        overflow: auto;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        thead {
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          background-color: #fff;
+          tr {
+            th {
+              padding: 10px 15px;
+              text-align: start;
+              &.commentLength {
+                text-align: center;
+              }
+            }
+          }
+        }
+        tr {
+          cursor: pointer;
+          transition: 0.3s;
+          th {
+            padding: 10px 15px;
+            text-align: start;
+          }
+          td {
+            padding: 10px 15px;
+          }
+          &:hover {
+            background-color: #1676fe;
+            color: #fff;
+          }
+          &.header:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .comment {
+    width: 50%;
+  }
+}

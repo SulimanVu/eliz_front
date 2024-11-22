@@ -1,12 +1,12 @@
 import styles from "./Nav.module.scss";
 import logoGGNTU from "shared/images/logoGGNTU.jpg";
 import adminPanel from "shared/images/adminPanel.jpg";
-import { Flex } from "antd";
 import { useNavigate } from "react-router-dom";
 
 export const Nav = () => {
   const params = window.location.href;
   const navigate = useNavigate();
+
   return (
     <nav>
       <div className={styles.header}>
@@ -18,7 +18,7 @@ export const Nav = () => {
       <div className={styles.navBar}>
         <ul className={styles.ul}>
           {!params.includes("monitoring") && (
-            <li>
+            <li onClick={() => navigate("/")}>
               <div>
                 <img src={adminPanel} alt="" />{" "}
               </div>
@@ -27,11 +27,51 @@ export const Nav = () => {
           )}
           {params.includes("monitoring") && (
             <>
-              <li onClick={() => navigate("/monitoring/comments")}>Замечания</li>
-              <li onClick={() => navigate("/monitoring/visit")}>
+              <li onClick={() => navigate("/")}>Главная</li>
+              <li
+                onClick={() => navigate("/monitoring/comments")}
+                className={
+                  window.location.pathname.includes("comments")
+                    ? styles.active
+                    : null
+                }
+              >
+                Замечания
+              </li>
+              <li
+                onClick={() => navigate("/monitoring/visit")}
+                className={
+                  window.location.pathname.includes("visit")
+                    ? styles.active
+                    : null
+                }
+              >
                 Посещаемость
               </li>
             </>
+          )}
+          {params.includes("/analitic") && (
+            <>
+              <li
+                onClick={() => navigate("/analitic/comments")}
+                className={
+                  window.location.pathname.includes("comments")
+                    ? styles.active
+                    : null
+                }
+              >
+                Аналитика замечаний
+              </li>
+              <li
+                onClick={() => navigate("/analitic/analyticvisit")}
+                className={
+                  window.location.pathname.includes("analyticvisit")
+                    ? styles.active
+                    : null
+                }
+              >
+                Аналитика посещаемости
+              </li></>
           )}
         </ul>
       </div>
